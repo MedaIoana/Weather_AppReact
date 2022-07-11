@@ -1,0 +1,9 @@
+.App{
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+.error{
+  font-size: 2em;
+  color:rgb(125, 20, 20);
+}

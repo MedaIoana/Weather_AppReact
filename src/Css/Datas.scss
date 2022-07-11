@@ -1,0 +1,32 @@
+.dateForm{
+    background-color: #000000a0;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    max-width: 100%;
+    margin: 3em;
+    border-radius: 0.4em;
+    color: white;
+    font-size: 1.7em;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    .wrapper{
+        display: grid;
+        .label{
+            margin: 1em;
+            margin-left: 1.5em;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .input{
+            font-size: 0.7em;
+            border-radius: 0.3em;
+            margin-left: 2em;
+            margin-bottom: 1em;
+        }  
+    }
+    .btn{
+        margin: 2em;
+        border-radius: 2em;
+        background-color: #adadeb;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 1em;
+    }
+}
