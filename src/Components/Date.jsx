@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Css/Datas.css'
+import './Datas.scss'
 
 const Date = ({date, setDate}) => {
   return (
