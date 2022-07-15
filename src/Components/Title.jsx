@@ -1,15 +1,28 @@
 import React from 'react'
+import { FaSun, FaMoon } from 'react-icons/fa'
 
-const Title = ({maxTemp, minTemp}) => {
+const Title = ({day}) => {
+
+  function maxTemp(day){
+    let max = -100.0
+    let min = 100
+    day.weather.forEach(element => {
+      let aux=element.temperature
+      if(aux > max) max = aux
+      if(aux < min) min = aux
+    });
+    return {max,min}
+  }
+
   return (
     <p className = 'title'>
-      <span className = 'maxTemp'
-            id = 'maxTemp'
-            value = {maxTemp+'°C/'+<i className = 'fas fa-sun'></i>}>
+      <FaSun className='icon-sun'/>
+      <span className = 'maxTemp' id = 'maxTemp'>
+        {maxTemp(day).max+'°C/'}
       </span>
-      <span className = 'minTemp'
-            id = 'minTemp'
-            value = {minTemp+'°C'+<i className = 'fas fa-moon'></i>}>
+      <FaMoon className='icon-moon'/>
+      <span className = 'minTemp' id = 'minTemp'>
+        {maxTemp(day).min+'°C'}
       </span>
     </p>
   )

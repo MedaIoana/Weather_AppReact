@@ -2,7 +2,9 @@
     background-color: #000000a0;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
     max-width: 100%;
-    margin: 3em;
+    margin-top: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
     border-radius: 0.4em;
     color: white;
     font-size: 1.7em;
@@ -28,5 +30,44 @@
         background-color: #adadeb;
         font-family:Georgia, 'Times New Roman', Times, serif;
         font-size: 1em;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    .dateForm{
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .dateForm{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+@media only screen and (max-width: 1150px){
+    .dateForm{
+        margin-left: 2em;
+        margin-right: 2em;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        .wrapper{
+            .input{
+                margin-right: 1em;
+            }  
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .dateForm{
+        margin-left: 2em;
+        margin-right: 2em;
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
     }
 }

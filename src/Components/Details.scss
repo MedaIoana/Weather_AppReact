@@ -1,0 +1,141 @@
+.card{
+    margin: 7em;
+    margin-left: 7em;
+    margin-right: 10em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0 1em 1em -0.3em rgb(20 20 20 / 20%), 0 0 0 2px rgb(0 10 10 / 2%);
+    max-width: 100%;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
+    .info{
+        display: block;
+        font-size: 1.3em;
+        width: 50%;
+        margin: 1em;
+        .location{
+            font-size: 2.3em;
+            font-weight: bold;
+        }
+        .title{
+            .maxTemp{
+                font-size: 2.5em;
+            }
+            .minTemp{
+                font-size: 2.5em;
+                color: rgb(62, 55, 55);
+            }
+            .icon-sun{
+                font-size: 2em;
+            }
+            .icon-moon{
+                font-size: 2em;
+                color: rgb(62, 55, 55);
+            }
+        }
+        .details{
+            display: grid;
+            grid-template-columns: 25px 400px;
+            .icon{
+                margin-top: 0.3em;
+            }
+            .detail{
+                font-size: 1.3em;
+                margin-left: 0.2em;
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+    .img{
+        font-size: 15em;
+        margin-left: 0.2em;
+    }
+}
+.cards{
+    margin-left: 3em;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5,22em);
+    align-items: center;
+    justify-content: center;
+    .hour{
+        margin-left: 2em;
+        margin-bottom: 4em;
+        width: 70%;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1em 1em -0.3em rgb(20 20 20 / 20%), 0 0 0 2px rgb(0 10 10 / 2%);
+        border-radius: 1em;
+        .h{
+            font-size: 1.5em;
+            margin-left: 4em;
+        }
+        .mini-icon{
+            margin-left: 1.1em;
+            font-size: 5em;
+            margin-bottom: -0.3em;
+        }
+        .celsius{
+            font-size: 1.5em;
+            margin-left: 4em;
+        }
+        .exact{
+            margin-left: 3em;
+            font-size: 1.3em;
+        }
+    }
+}
+
+@media only screen and (max-width: 1650px){
+    .cards{
+        grid-template-columns: repeat(3,22em);
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .card{
+        display: block;
+    }
+    .cards{
+        grid-template-columns: repeat(2,22em);
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .card{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .cards{
+        grid-template-columns: repeat(1,22em);
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .card{
+        margin-left: 0.3em;
+        margin-right: 0.3em;
+        .info{
+            .title{
+                .maxTemp{
+                    font-size: 2.2em;
+                }
+                .minTemp{
+                    font-size: 2.2em;
+                }
+                .icon-sun{
+                    font-size: 1.8em;
+                }
+                .icon-moon{
+                    font-size: 1.8em;
+                }
+            }
+            .details{
+                .detail{
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}

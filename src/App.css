@@ -2,8 +2,17 @@
   align-items: center;
   justify-content: center;
   display: grid;
+  grid-template-columns: 100%;
 }
 .error{
   font-size: 2em;
   color:rgb(125, 20, 20);
+}
+.button{
+  margin-left: 5em;
+  margin-right: 5em;
+  border-radius: 2em;
+  background-color: #adadeb;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
 }

@@ -5,9 +5,9 @@ import Longitude from './Longitude'
 import Date from './Date'
 import { Link } from 'react-router-dom'
 
-const Dates = ({lat, setLat, lon, setLon, date, setDate, handleSubmit}) => {
+const Dates = ({lat, setLat, lon, setLon, date, setDate, handleSubmit, setIsToggled}) => {
   return (
-    <form className = 'dateForm'>
+    <div className = 'dateForm'>
         <Latitude
           lat = {lat}
           setLat = {setLat}
@@ -20,14 +20,12 @@ const Dates = ({lat, setLat, lon, setLon, date, setDate, handleSubmit}) => {
           date = {date}
           setDate = {setDate}
         />
-        {lat && lon && date && 
-          
-            <button className = 'btn' type = 'submit' onClick={handleSubmit} >
-              <Link to = "/details" >Check</Link>
-            </button>
-          
-        }
-    </form>
+      {lat && lon && date &&   
+          <button className = 'btn' id='btn' onClick = {() => {handleSubmit(); setIsToggled(true)}} >
+            <Link className = 'btn' to = "/details" >Check</Link>
+          </button>
+      }
+    </div>
   )
 }
 
